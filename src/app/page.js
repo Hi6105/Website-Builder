@@ -1,5 +1,5 @@
 import React from "react";
 
 export const page = () => {
-  return <div>HI</div>;
+  return <div>num</div>;
 };
