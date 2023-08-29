@@ -42,7 +42,6 @@ export default function Enrtypage() {
               <option value="1">Donation Website</option>
               <option value="2">E-Commerce Website</option>
               <option value="3">Blog Website</option>
-              <option value="3">Portfolio</option>
             </select>
           </div>
           <button className="selectedtype" type="submit">
