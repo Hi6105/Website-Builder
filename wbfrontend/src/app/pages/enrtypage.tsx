@@ -39,7 +39,7 @@ export default function Enrtypage() {
           <div className="sitetype">
             <select className="form-select" aria-label="Default select example">
               <option selected>Select Website type</option>
-              <option value="1">Donation Website</option>
+              <option value="1">DonationWebsite</option>
               <option value="2">E-Commerce Website</option>
               <option value="3">Blog Website</option>
               <option value="3">Portfolio</option>
