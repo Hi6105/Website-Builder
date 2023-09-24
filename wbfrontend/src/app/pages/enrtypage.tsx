@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import pic from "public/pictures/4300580.jpg";
 import Image from "next/image";
-import pic from "./4300580.jpg";
+import { useNavigate } from "react-router-dom";
 import "./entrypage.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Login from "../../../components/login/login.js";
@@ -9,6 +10,7 @@ import SignUp from "../../../components/signup/signup.js";
 export default function Enrtypage() {
   const [show, setShow] = useState(false);
   const [state, setState] = useState("");
+  const [site, setSite] = useState("");
 
   const handleClose = () => setShow(false);
   const handleSignUp = () => {
@@ -37,11 +39,20 @@ export default function Enrtypage() {
             </button>
           </div>
           <div className="sitetype">
-            <select className="form-select" aria-label="Default select example">
-              <option selected>Select Website type</option>
-              <option value="1">Donation Website</option>
-              <option value="2">E-Commerce Website</option>
-              <option value="3">Blog Website</option>
+            <select
+              id="form-select"
+              className="form-select"
+              aria-label="Default select example"
+              onChange={(e) => {
+                setSite(e.target.value);
+              }}
+            >
+              <option value="0" selected>
+                Select Website type
+              </option>
+              <option value="donation">Donation Website</option>
+              <option value="e-com">E-Commerce Website</option>
+              <option value="blog">Blog Website</option>
             </select>
           </div>
           <button className="selectedtype" type="submit">
