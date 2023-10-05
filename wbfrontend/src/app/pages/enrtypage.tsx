@@ -1,16 +1,18 @@
+"use client";
 import React, { useState } from "react";
 import pic from "public/pictures/4300580.jpg";
 import Image from "next/image";
-import { useNavigate } from "react-router-dom";
 import "./entrypage.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Login from "../../../components/login/login.js";
 import SignUp from "../../../components/signup/signup.js";
+import { useRouter } from "next/navigation";
 
 export default function Enrtypage() {
   const [show, setShow] = useState(false);
   const [state, setState] = useState("");
   const [site, setSite] = useState("");
+  const Router = useRouter();
 
   const handleClose = () => setShow(false);
   const handleSignUp = () => {
@@ -50,12 +52,15 @@ export default function Enrtypage() {
               <option value="0" selected>
                 Select Website type
               </option>
-              <option value="donation">Donation Website</option>
+              <option value="donationSite">Donation Website</option>
               <option value="e-com">E-Commerce Website</option>
-              <option value="blog">Blog Website</option>
+              <option value="blogSite">Blog Website</option>
             </select>
           </div>
-          <button className="selectedtype" type="submit">
+          <button
+            className="selectedtype"
+            onClick={() => Router.push(`/${site}`)}
+          >
             Submit
           </button>
         </div>

@@ -1,0 +1,66 @@
+/* Reset some default styles */
+
+/* Style the navbar */
+.navbar {
+  background-color: #6499e9; /* Background color of the navbar */
+  display: flex;
+  justify-content: space-between; /* Logo on left, links on right */
+  align-items: center; /* Vertically center content */
+  padding: 10px 20px; /* Add some padding for spacing */
+}
+
+/* Style the logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.charity-text {
+  font-weight: bold; /* Make the "Charity" text bold */
+  font-size: 24px; /* Adjust the font size as needed */
+  color: #fff; /* Text color for "Charity" */
+  margin-right: 10px; /* Add some spacing to the right of "Charity" */
+}
+
+/* Style the navigation links */
+.nav-links {
+  display: flex;
+  gap: 20px; /* Spacing between links */
+}
+
+.nav-links li {
+  font-size: 18px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff; /* Link text color */
+}
+
+/* Change link color on hover */
+.nav-links a:hover {
+  color: #ff5733; /* Change to your desired hover color */
+}
+
+.mainImage {
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.frontImage {
+  max-width: 95%;
+  max-height: 30em;
+  border-radius: 10px;
+}
+
+/* Reset some default styles */
+
+/* Style the circular div */
+.circular-div {
+  width: 200px; /* Adjust the size of the circular div */
+  height: 200px; /* Adjust the size of the circular div */
+  margin: auto;
+  border: 2px solid #333; /* Dark border color */
+  border-radius: 50%; /* Make it circular */
+  background-color: transparent; /* Background color */
+}

@@ -1,0 +1,35 @@
+.slider {
+  background-color: #f6edea;
+  padding-top: 2%;
+  color: grey;
+  font-size: larger;
+  padding-bottom: 2%;
+}
+
+.sliderSelect {
+  color: #4a5859;
+  margin-left: 29%;
+  margin-right: 20%;
+}
+
+.sliderSelect:link {
+  text-decoration: none;
+}
+
+.sliderSelect:hover {
+  text-decoration: underline;
+  text-underline-offset: 1em;
+}
+
+.sliderSelect:active {
+  text-decoration: underline;
+  text-underline-offset: 1em;
+}
+
+.line {
+  width: 50%;
+  margin-top: 1.1%;
+  margin-bottom: 0%;
+  margin-left: 29%;
+  margin-right: 20%;
+}

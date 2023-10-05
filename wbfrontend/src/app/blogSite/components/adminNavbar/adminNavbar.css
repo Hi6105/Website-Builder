@@ -1,0 +1,12 @@
+.topNav {
+  background-color: #4c4177;
+  /* background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%); */
+  padding: 15px;
+  text-align: center;
+}
+
+.icon {
+  font-size: x-large;
+  color: #fffffc;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}

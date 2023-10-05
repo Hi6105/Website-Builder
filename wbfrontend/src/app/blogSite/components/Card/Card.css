@@ -1,0 +1,72 @@
+.postCart {
+  background-color: white;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  align-content: center;
+  border-radius: 1%;
+  padding: 1%;
+}
+
+.singelPost {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  margin-bottom: 2%;
+  margin-top: 1%;
+}
+
+.profile {
+  margin-right: 1%;
+  width: 7%;
+  height: 7%;
+  border-radius: 5em;
+}
+
+.share {
+  margin-left: auto;
+}
+
+.content,
+.title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+.title {
+  margin-bottom: 1.6rem;
+  font-weight: 600;
+}
+
+.content {
+  font-weight: 500;
+  margin-bottom: 2em;
+}
+
+.content p {
+  margin-top: 1.5rem;
+}
+
+.comment {
+  margin-left: 1em;
+}
+
+.read {
+  font-weight: 400;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.favorite,
+.comment,
+.share {
+  border: none;
+  background-color: white;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+}

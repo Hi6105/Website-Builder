@@ -1,0 +1,38 @@
+.topNav {
+  background-color: #774141f0;
+  /* background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%); */
+  padding: 22px;
+}
+
+.icon {
+  font-size: x-large;
+  color: #fffffc;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.login {
+  float: right;
+  cursor: pointer;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-left: 1rem;
+  width: 100px;
+  padding: 10px;
+  color: white;
+  background: none;
+}
+
+.signup {
+  float: right;
+  cursor: pointer;
+  border: 0;
+  padding-left: none;
+  border-radius: 8px;
+  font-weight: 600;
+  width: 100px;
+  margin-left: -30px;
+  padding: 10px;
+  color: white;
+  background: none;
+}
