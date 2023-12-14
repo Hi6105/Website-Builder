@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Info from "./components/Info";
-import manProfile from "public/manProfile.jpg";
+import manProfile from "public/pictures/manProfile.jpg";
 
 export default function Home() {
   const [show, setShow] = useState(true);
@@ -37,7 +37,9 @@ export default function Home() {
           <div className="mainImage">
             <Image src={frontImage} alt="NA" className="frontImage"></Image>
           </div>
-          <div className="circular-div"></div>
+          <div className="circular-div">
+            <Image src={manProfile} alt="NA" className="manProfile"></Image>
+          </div>
         </div>
       )}
     </>
