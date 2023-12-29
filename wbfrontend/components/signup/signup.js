@@ -5,12 +5,13 @@ import Modal from "react-bootstrap/Modal";
 import { useFormik } from "formik";
 import { signupValidation } from "../../src/app/utilities/schema/signupValidation";
 import "bootstrap/dist/css/bootstrap.min.css";
+const axios = require("axios");
 
 let signupInitialValues = {
   firstName: "",
   lastName: "",
-  signupEmail: "",
-  signupPassword: "",
+  email: "",
+  password: "",
   signupConfirmPassword: "",
 };
 
@@ -19,7 +20,20 @@ const SignUp = ({ show, setShow, handleClose }) => {
     initialValues: signupInitialValues,
     validationSchema: signupValidation,
     onSubmit: (values) => {
-      console.log(values);
+      signupInitialValues.email = values.email;
+      signupInitialValues.lastName = values.lastName;
+      signupInitialValues.password = values.password;
+      signupInitialValues.firstName = values.firstName;
+      //console.log(loginInitialValues.email);
+      axios
+        .post("http://localhost:7000/signup", signupInitialValues)
+        .then((response) => {
+          console.log("Data sent successfully");
+          console.log("Response from backend:", response.data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
     },
   });
 
@@ -63,11 +77,11 @@ const SignUp = ({ show, setShow, handleClose }) => {
             }
             <Form.Label>Email address</Form.Label>
             <Form.Control
-              name="signupEmail"
+              name="email"
               type="email"
               placeholder="name@example.com"
               autoFocus
-              value={values.signupEmail}
+              value={values.email}
               onChange={handleChange}
               onBlur={handleBlur}
             />
@@ -78,11 +92,11 @@ const SignUp = ({ show, setShow, handleClose }) => {
             }
             <Form.Label>Password</Form.Label>
             <Form.Control
-              name="signupPassword"
+              name="password"
               type="password"
               placeholder=""
               autoFocus
-              value={values.signupPassword}
+              value={values.password}
               onChange={handleChange}
               onBlur={handleBlur}
             />

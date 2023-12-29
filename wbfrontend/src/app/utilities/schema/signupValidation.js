@@ -14,8 +14,8 @@ export const signupValidation = yup.object({
     .min(2)
     .max(20)
     .required("*Please enter your Last Name"),
-  signupEmail: yup.string().email().required("*Please enter your email"),
-  signupPassword: yup
+  email: yup.string().email().required("*Please enter your email"),
+  password: yup
     .string()
     .required("*Please enter a password")
     .min(8, "*Password must have at least 8 character")
@@ -27,5 +27,5 @@ export const signupValidation = yup.object({
     .string()
     .required("*Please enter a password")
     .min(8, "*Password must have at least 8 character")
-    .oneOf([yup.ref("signupPassword"), null], "*Password does not match"),
+    .oneOf([yup.ref("password"), null], "*Password does not match"),
 });

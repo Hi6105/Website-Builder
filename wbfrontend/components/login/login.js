@@ -5,6 +5,7 @@ import Modal from "react-bootstrap/Modal";
 import { useFormik } from "formik";
 import { loginValidation } from "../../src/app/utilities/schema/loginValidation";
 import "bootstrap/dist/css/bootstrap.min.css";
+const axios = require("axios");
 
 let loginInitialValues = {
   email: "",
@@ -16,7 +17,18 @@ const Login = ({ show, setShow, handleClose }) => {
     initialValues: loginInitialValues,
     validationSchema: loginValidation,
     onSubmit: (values) => {
-      console.log(values);
+      loginInitialValues.email = values.email;
+      loginInitialValues.password = values.password;
+      //console.log(loginInitialValues.email);
+      axios
+        .post("http://localhost:7000/login", loginInitialValues)
+        .then((response) => {
+          console.log("Data sent successfully");
+          console.log("Response from backend:", response.data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
     },
   });
 
