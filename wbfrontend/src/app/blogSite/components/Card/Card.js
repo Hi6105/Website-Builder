@@ -104,7 +104,6 @@ therapy#coping#mental wellbeing#talking therapy#sisterhood#community`;
 
   return (
     <div class="singelPost">
-      <Image src={profile} class="profile" />
       <div class="postCart">
         <h3 class="title">Title of the Blog</h3>
         <div className="carousel-container">

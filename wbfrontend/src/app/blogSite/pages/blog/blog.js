@@ -1,13 +1,12 @@
 import Navbar from "../../components/Navbar/Navbar";
 import "../../pages/style.css";
-import { Tab } from "../../components/Tab/Tab";
 import { Card } from "../../components/Card/Card";
 
-function Blog() {
+function Blog({ isAdmin }) {
+  isAdmin = false;
   return (
     <>
-      <Navbar />
-      <Tab />
+      <Navbar isAdmin={isAdmin} />
       <div class="allPost">
         <Card />
         <Card />

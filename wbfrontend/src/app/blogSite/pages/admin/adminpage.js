@@ -1,17 +1,18 @@
-import React from "react";
-import AdminNavbar from "./components/adminNavbar/AdminNavbar";
-import "./style.css";
-import ProfileCard from "./components/profileCard/profileCard";
+import React, { useState } from "react";
+import Navbar from "../../components/Navbar/Navbar";
+import ProfileCard from "../../components/profileCard/profileCard";
 
-function admin() {
+function Admin() {
+  const isAdmin = true;
+
   return (
     <>
-      <AdminNavbar />
-      <div style={{ backgroundColor: "#f6edea" }}>
+      <Navbar isAdmin={isAdmin} />
+      <div>
         <ProfileCard />
       </div>
     </>
   );
 }
 
-export default admin;
+export default Admin;

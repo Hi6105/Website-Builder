@@ -1,11 +1,13 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Blog from "./pages/blog/blog";
+import Admin from "./pages/admin/adminpage";
 
 function Home() {
+  let isAdmin = false;
   return (
     <>
-      <Blog />
+      <Blog isAdmin={isAdmin} />
     </>
   );
 }
