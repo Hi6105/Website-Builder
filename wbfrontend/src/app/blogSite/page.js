@@ -7,7 +7,7 @@ function Home() {
   let isAdmin = false;
   return (
     <>
-      <Blog isAdmin={isAdmin} />
+      <Admin isAdmin={isAdmin} />
     </>
   );
 }

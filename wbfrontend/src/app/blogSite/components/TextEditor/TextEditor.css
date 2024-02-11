@@ -1,0 +1,21 @@
+.textEditor {
+  width: 70%;
+  margin: auto;
+  margin-top: 3%;
+}
+
+.create {
+  color: black;
+  font-weight: 700;
+  background-color: white;
+  border-radius: 40px;
+  padding: 1%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 1%;
+}
+
+body {
+  margin: 0px;
+  background-color: #d8d9da;
+}

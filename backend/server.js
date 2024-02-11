@@ -2,8 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const connectDb = require("./config/db");
-const login = require("./models/Login");
 const signup = require("./models/Signup");
+const blog = require("./models/Postdata");
 
 require("dotenv").config(".env");
 const app = express();
@@ -64,6 +64,17 @@ app.post("/signup", async (req, res) => {
     .catch((err) => {
       console.log(err);
     });
+});
+
+//blog api
+app.post("/blog", async (req, res) => {
+  const { blogdata } = req.body;
+  console.log(req.body);
+  const newBlog = new blog({
+    blogdata: blogdata,
+  });
+  await newBlog.save();
+  res.send("Blog has been added");
 });
 
 // Create a post request for /create-checkout-session

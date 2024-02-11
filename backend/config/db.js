@@ -9,7 +9,7 @@ const connectDb = () => {
       console.log(`database connection successful`);
     })
     .catch((err) => {
-      console.log(`unsuccessful connection`);
+      console.log(`unsuccessful connection ${err}`);
     });
 };
 

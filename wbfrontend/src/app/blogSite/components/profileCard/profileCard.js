@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import "./profileCard.css";
 import ProfileModal from "../profileModal/profileModal";
+import { useRouter } from "next/navigation";
 
 function ProfileCard() {
   const [modalShow, setmodalShow] = useState(false);
+  const Router = useRouter();
+
   const handleClose = () => {
     setmodalShow(false);
   };
@@ -36,7 +39,12 @@ function ProfileCard() {
             <p>example@gmail.com</p>
           </div>
           <div className="togglebutton">
-            <button className="write">Start Writing</button>
+            <button
+              className="write"
+              onClick={() => Router.push(`/blogSite/components/TextEditor`)}
+            >
+              Start Writing
+            </button>
           </div>
         </div>
       </div>
